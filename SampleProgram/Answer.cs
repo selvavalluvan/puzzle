@@ -36,6 +36,76 @@ namespace SampleProgram
         }
     }
 	
+	public abstract class Piece {
+		
+		public Position pos { get; set; }
+		public int id { get; set; }
+		
+		public Piece(){}
+		public abstract IEnumerable<Position> ValidMovesFor(Position pos);
+	}
+	
+	public class Knight : Piece 
+	{
+		
+		private KnightMove _knight;
+		
+		public Knight()
+		{
+			_knight = new KnightMove();
+		}
+		
+        public override IEnumerable<Position> ValidMovesFor(Position pos) {
+        	return _knight.ValidMovesFor(pos);
+        }
+	}
+	
+    public class Queen : Piece
+    {
+		
+        public override IEnumerable<Position> ValidMovesFor(Position pos)
+        {
+            for(int i=1;i<=8;i++)
+            {
+                for (int j=1;j<=8;j++)
+                {
+                    if (pos.X == i && pos.Y == j)
+                        continue;
+                    var newX = i;
+                    var newY = j;
+                    yield return new Position(newX, newY);
+                }
+            }
+        }
+    }
+	
+    public class Bishop : Piece
+    {
+		
+        public static readonly int[,] Directions = new[,] { { 1, 1 }, { 1, -1 }, { -1, 1 }, { -1, -1 } };
+
+        public override IEnumerable<Position> ValidMovesFor(Position pos)
+        {
+            for (int i = 0; i <= Directions.GetUpperBound(0); i++)
+            {
+                int x1 = pos.X;
+                int y1 = pos.Y;
+                while (true) {
+                    int newX = x1 + Directions[i, 0];
+                    int newY = y1 + Directions[i, 1];
+
+                    if (newX > 8 || newX < 1 || newY > 8 || newY < 1) {
+                        break;
+                    } else {
+                        x1 = newX;
+                        y1 = newY;
+                        yield return new Position(newX, newY);
+                    }
+                }
+            }
+        }
+    }
+	
     static class PieceFactory
     {
         public static Piece Get(string piece)
@@ -43,13 +113,13 @@ namespace SampleProgram
             switch (piece)
             {
                 case "knight":
-                    return new KnightMove();
+                    return new Knight();
                 case "queen":
-                    return new QueenMove();
+                    return new Queen();
                 case "bishop":
-                    return new BishopMove();
+                    return new Bishop();
 				default:
-					return new QueenMove();
+					throw new System.ArgumentException("Invalid piece");
 					
             }
         }

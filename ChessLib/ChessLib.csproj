@@ -43,10 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-  	<Compile Include="Piece.cs" />
     <Compile Include="KnightMove.cs" />
-    <Compile Include="QueenMove.cs" />
-    <Compile Include="BishopMove.cs" />
     <Compile Include="Position.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
