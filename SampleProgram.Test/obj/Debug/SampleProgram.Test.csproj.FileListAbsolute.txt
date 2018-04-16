@@ -1,0 +1,6 @@
+/home/selva/Desktop/SampleProgram/SampleProgram.Test/obj/Debug/SampleProgram.Test.csprojResolveAssemblyReference.cache
+/home/selva/Desktop/SampleProgram/SampleProgram.Test/obj/Debug/SampleProgram.Test.csproj.CoreCompileInputs.cache
+/home/selva/Desktop/SampleProgram/SampleProgram.Test/obj/Debug/SampleProgram.Test.dll
+/home/selva/Desktop/SampleProgram/SampleProgram.Test/obj/Debug/SampleProgram.Test.pdb
+/home/selva/Desktop/SampleProgram/SampleProgram.Test.dll
+/home/selva/Desktop/SampleProgram/SampleProgram.Test.pdb

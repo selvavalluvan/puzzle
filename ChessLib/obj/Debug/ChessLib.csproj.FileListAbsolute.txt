@@ -1,0 +1,6 @@
+/home/selva/Desktop/SampleProgram/ChessLib/obj/Debug/ChessLib.csprojResolveAssemblyReference.cache
+/home/selva/Desktop/SampleProgram/ChessLib/obj/Debug/ChessLib.csproj.CoreCompileInputs.cache
+/home/selva/Desktop/SampleProgram/ChessLib/obj/Debug/ChessLib.dll
+/home/selva/Desktop/SampleProgram/ChessLib/obj/Debug/ChessLib.pdb
+/home/selva/Desktop/SampleProgram/ChessLib.dll
+/home/selva/Desktop/SampleProgram/ChessLib.pdb
