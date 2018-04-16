@@ -36,8 +36,12 @@ namespace SampleProgram
         }
     }
 	
+	
+	/*
+	* 
+	*
+	*/
 	public abstract class Piece {
-		
 		public Position pos { get; set; }
 		public int id { get; set; }
 		
@@ -47,7 +51,6 @@ namespace SampleProgram
 	
 	public class Knight : Piece 
 	{
-		
 		private KnightMove _knight;
 		
 		public Knight()
@@ -62,7 +65,6 @@ namespace SampleProgram
 	
     public class Queen : Piece
     {
-		
         public override IEnumerable<Position> ValidMovesFor(Position pos)
         {
             for(int i=1;i<=8;i++)
@@ -81,7 +83,6 @@ namespace SampleProgram
 	
     public class Bishop : Piece
     {
-		
         public static readonly int[,] Directions = new[,] { { 1, 1 }, { 1, -1 }, { -1, 1 }, { -1, -1 } };
 
         public override IEnumerable<Position> ValidMovesFor(Position pos)
@@ -120,7 +121,6 @@ namespace SampleProgram
                     return new Bishop();
 				default:
 					throw new System.ArgumentException("Invalid piece");
-					
             }
         }
     }
@@ -158,6 +158,12 @@ namespace SampleProgram
 			}
 		}
 		
+        public Piece PickRandomPiece()
+        {
+            var randomKey = this.Pieces.Keys.ToArray()[_rnd.Next(this.Pieces.Count)];
+            return this.Pieces[randomKey];
+        }
+		
 		public void Move(Piece piece)
 		{
 			var possibleMoves = piece.ValidMovesFor(piece.pos).ToList();
@@ -172,13 +178,5 @@ namespace SampleProgram
 			piece.pos = pos;
 			this.Pieces.Add(pos, piece);
 		}
-		
-        public Piece PickRandomPiece()
-        {
-            var randomKey = this.Pieces.Keys.ToArray()[_rnd.Next(this.Pieces.Count)];
-            return this.Pieces[randomKey];
-        }
-		
 	}
-
 }
