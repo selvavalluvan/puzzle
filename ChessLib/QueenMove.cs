@@ -2,9 +2,10 @@ using System.Collections.Generic;
 
 namespace ChessLib
 {
-    public class QueenMove
+    public class QueenMove : Piece
     {
-        public IEnumerable<Position> ValidMovesFor(Position pos)
+		
+        public override IEnumerable<Position> ValidMovesFor(Position pos)
         {
             for(int i=1;i<=8;i++)
             {

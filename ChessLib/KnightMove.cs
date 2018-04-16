@@ -2,11 +2,11 @@ using System.Collections.Generic;
 
 namespace ChessLib
 {
-    public class KnightMove
+    public class KnightMove : Piece
     {
         public static readonly int[,] Moves = new[,] { { 1, 2 }, { 1, -2 }, { -1, 2 }, { -1, -2 }, { 2, 1 }, { -2, 1 }, { 2, -1 }, { -2, -1 } };
 
-        public IEnumerable<Position> ValidMovesFor(Position pos)
+        public override IEnumerable<Position> ValidMovesFor(Position pos)
         {
             for(var i=0;i<=Moves.GetUpperBound(0);          i++)
             {

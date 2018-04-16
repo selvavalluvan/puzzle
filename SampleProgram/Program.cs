@@ -6,41 +6,82 @@ namespace SampleProgram
 {
     public static class Program
     {
-        // public static void Main()
-        // {
-        //     //var game = new Game();
-        //     var game = new ComplexGame();
-        //
-        //     game.Setup();
-        //     game.Play(1);
-        //
-        //     Console.WriteLine("Press any key ...");
-        //     Console.ReadKey();
-        // }
         public static void Main()
         {
-            var testCard = AuthenticationMethod.FORMS;
-             Console.WriteLine(testCard.ToString());
+            //var game = new Game();
+            var game = new ComplexGame();
+
+            game.Setup();
+            game.Play(5);
+
+            Console.WriteLine("Press any key ...");
+            Console.ReadKey();
         }
 
-        public sealed class Piece {
+	    // abstract class Position
+// 	    {
+// 	        public abstract string Title { get; }
+// 	    }
+//
+// 	    class Manager : Position
+// 	    {
+// 	        public override string Title
+// 	        {
+// 	            get
+// 	            {
+// 	                return "Manager";
+// 	            }
+// 	        }
+// 	    }
+//
+// 	    class Clerk : Position
+// 	    {
+// 	        public override string Title
+// 	        {
+// 	            get
+// 	            {
+// 	                return "Clerk";
+// 	            }
+// 	        }
+// 	    }
+//
+// 	    class Programmer : Position
+// 	    {
+// 	        public override string Title
+// 	        {
+// 	            get
+// 	            {
+// 	                return "Programmer";
+// 	            }
+// 	        }
+// 	    }
+//
+// 	    static class Factory
+// 	    {
+// 	        /// <summary>
+// 	        /// Decides which class to instantiate.
+// 	        /// </summary>
+// 	        public static Position Get(int id)
+// 	        {
+// 	            switch (id)
+// 	            {
+// 	                case 0:
+// 	                    return new Manager();
+// 	                case 1:
+// 	                case 2:
+// 	                    return new Clerk();
+// 	                case 3:
+// 	                default:
+// 	                    return new Programmer();
+// 	            }
+// 	        }
+// 	    }
+//
+// 	    static void Main() {
+// 			for (int i = 0; i <= 3; i++) {
+// 				var position = Factory.Get(i); Console.WriteLine("Where id = {0}, position = {1} ", i, position.Title);
+// 			}
+// 		}
 
-            private readonly String name;
-            private readonly int value;
-
-            public static readonly AuthenticationMethod FORMS = new AuthenticationMethod (1, "FORMSeee");
-            public static readonly AuthenticationMethod WINDOWSAUTHENTICATION = new AuthenticationMethod (2, "WINDOWS");
-            public static readonly AuthenticationMethod SINGLESIGNON = new AuthenticationMethod (3, "SSN");
-
-            private AuthenticationMethod(int value, String name){
-                this.name = name;
-                this.value = value;
-            }
-
-            public override String ToString(){
-                return name;
-            }
-
-        }
-    }
+	}
 }

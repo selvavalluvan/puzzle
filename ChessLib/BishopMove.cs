@@ -3,11 +3,12 @@ using System.Collections.Generic;
 
 namespace ChessLib
 {
-    public class BishopMove
+    public class BishopMove : Piece
     {
+		
         public static readonly int[,] Directions = new[,] { { 1, 1 }, { 1, -1 }, { -1, 1 }, { -1, -1 } };
 
-        public IEnumerable<Position> ValidMovesFor(Position pos)
+        public override IEnumerable<Position> ValidMovesFor(Position pos)
         {
             for (int i = 0; i <= Directions.GetUpperBound(0); i++)
             {

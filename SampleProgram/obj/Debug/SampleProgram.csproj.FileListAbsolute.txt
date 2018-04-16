@@ -5,3 +5,10 @@
 /home/selva/Desktop/SampleProgram/SampleProgram/obj/Debug/SampleProgram.pdb
 /home/selva/Desktop/SampleProgram/SampleProgram.exe
 /home/selva/Desktop/SampleProgram/SampleProgram.pdb
+/Users/svalluvan/scraps/csharp/puzzle/SampleProgram/obj/Debug/SampleProgram.csprojResolveAssemblyReference.cache
+/Users/svalluvan/scraps/csharp/puzzle/SampleProgram/obj/Debug/SampleProgram.csproj.CoreCompileInputs.cache
+/Users/svalluvan/scraps/csharp/puzzle/SampleProgram/obj/Debug/SampleProgram.exe
+/Users/svalluvan/scraps/csharp/puzzle/SampleProgram/obj/Debug/SampleProgram.pdb
+/Users/svalluvan/scraps/csharp/puzzle/SampleProgram.exe.config
+/Users/svalluvan/scraps/csharp/puzzle/SampleProgram.exe
+/Users/svalluvan/scraps/csharp/puzzle/SampleProgram.pdb
